@@ -29,7 +29,7 @@ public class JDBCconnect {
         try {
 
             con = DriverManager.getConnection(
-                    "jdbc:postgresql://127.0.0.1:5432/alluWebApp", "alluwebapp",
+                    "jdbc:postgresql://127.0.0.1:5432/alluwebapp", "alluwebapp",
                     "xxxxxx");
 
         } catch (SQLException e) {
@@ -47,7 +47,7 @@ public class JDBCconnect {
         }
 
         Statement stmt = con.createStatement();
-        String sql = "SELECT id,name,address FROM alluWebApp.address WHERE name = 'Allan'";
+        String sql = "SELECT id,name,address FROM alluwebapp.address WHERE name = 'Allan'";
         ResultSet rs = stmt.executeQuery(sql);
 
         while(rs.next()){
